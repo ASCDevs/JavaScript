@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+	<script src="./calculos.js"></script>
+	<title>Calculadora - Empréstimo</title>
+</head>
+<body style="background-color: #f2f2f2">
+	<div style="margin-top:20px; height: 600px; background-color: white" class="container-md">
+		<h1>Calculadora de empréstimo</h1>
+		<div class="row" style="margin-top: 20px;">
+			<div class="col-md-5" >
+				<h5>Digite as informações:</h5>
+				<table class="table table-borderless">
+					<tr>
+						<td>Total do empréstimo (R$):</td>
+						<td><input type="text" class="form-control" id="vlEmprestimo"></td>
+					</tr>
+					<tr>
+						<td>Juros anuais (%):</td>
+						<td><input type="text" class="form-control" id="vlJuros"></td>
+					</tr>
+					<tr>
+						<td>Período (anos):</td>
+						<td><input type="text" class="form-control" id="anos"></td>
+					</tr>
+					<tr>
+						<td><b>Pagamentos aproximados:</b></td>
+						<td><button type="button" onclick="calcular()" class="btn btn-outline-secondary">Calcular</button></td>
+					</tr>
+					<tr>
+						<td>Pagamento mensal:</td>
+						<td><p id="vlMensal">R$ 0,00</p></td>
+					</tr>
+					<tr>
+						<td>Pamento total:</td>
+						<td><p id="vlTotal">R$ 0,00</p></td>
+					</tr>
+					<tr>
+						<td>Juros pago:</td>
+						<td><p id="vlDif">R$ 0,00</p></td>
+					</tr>
+				</table>
+			</div>
+			<div class="col-md-7" style="background-color: lightblue" >
+				<h5>Informações:</h5>
+				<div class="container" style="background-color: yellow; height: 300px">gráfico
+				</div>
+			</div>
+		</div>
+		<div class="container" style="height: 100px; background-color: gray; margin-top: 10px ">
+			<p>Relatório de parcelas</p>
+		</div>
+	</div>
+	
+</body>
+</html>
