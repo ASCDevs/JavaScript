@@ -1,0 +1,91 @@
+.windowItens{
+    position: absolute;
+    position: fixed;
+    display: flex;
+    display: none;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.containerCart{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    max-height: 90%;
+    width: 60%;
+    min-width: 460px;
+    max-width: 800px;
+}
+.containerCart button{
+    display: flex;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    cursor: pointer;
+    outline: none;
+    align-self: flex-end;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+}
+.containerCart button img{
+    display: flex;
+    width: 50px;
+    height: 50px;
+}
+.shoppingCart{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 100%;
+    max-width: 800px;
+    
+    overflow-y: auto;
+    overflow-x: hidden;
+    border-bottom: 1px solid #d1d1d1;
+    border: 1px solid #d1d1d1;
+    border-radius: 7px;
+}
+
+
+.title{
+    border-bottom: 1px solid #d1d1d1;
+    color: #696868;
+    align-items: center;
+    padding: 20px 30px;
+    font-size:20px;
+}
+
+.product{
+    display: flex;
+    height: 120px;
+    border-bottom: 1px solid #d1d1d1;
+    flex-direction: row;
+    padding: 0 30px;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.product:last-child{
+    border: none;
+}
+
+.delete-btn{
+    height: 24px;
+    width: 24px;
+    cursor: pointer;
+    
+}
+.delete-btn img{
+    height: 24px;
+    width: 24px;
+    color:#d1d1d1 ;
+}
+
+.cartFim{
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

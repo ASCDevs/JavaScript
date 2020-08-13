@@ -11,7 +11,6 @@ html,body{
     flex-direction: column;
     
 }
-
 .container{
     width: 75%;
     max-width: 1100px;
@@ -25,6 +24,7 @@ html,body{
     display: flex;
     align-items: center ;
     justify-content: center;
+    position: fixed;
 }
 .menu img{
     height: 40px;
@@ -35,7 +35,40 @@ html,body{
     align-items: center;
     justify-content: space-between;
 }
+.carrinho{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border:none;
+    background-color: rgb(0,0,0, 0);
+    outline: none;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: 0.2s;
+    height: 60px;
+    width: 60px;
+}
+.carrinho:hover{
+    background-color: #3d3d3d;
+}
+.carrinho span{
+    background-color: #ff3333;
+    color: white;
+    margin-left: -11px;
+    margin-top: 10px;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    display: flex;
+    align-self: flex-start;
+    align-items: center;
+    justify-content: center;
+    font-size: 12.5px;
+    font-weight: 400;
+}
+
 .corpo{
+    margin-top: 60px;
     display: flex;
     justify-content: center;
     width: 100%;

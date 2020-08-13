@@ -4,22 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./src/estilo.css">
+    <link rel="stylesheet" href="./src/styles/windowCart.css">
     <link rel="shortcut icon" href="./src/icons/cart.svg">
+    <script src="./src/scripts/shoppingCart.js"></script>
     <title>Shopping Cart</title>
 </head>
-<body>
+<body onload="configs()">
     <div class="conteudo">
         <div class="menu">
             <div class="navbar container">
                 <h2>Shopping Cart</h2>
-                <div class="carrinho">
+                <button onClick="openCart()" type="button"  class="carrinho">
                     <img src="./src/icons/cart.svg" alt="">
-                    <span id="qtd_itens"></span>
+                    <span id="qtd_itens">0</span>
+                </button>
+            </div>
+        </div>
+        <div id="cart" class="windowItens">
+            <div class="containerCart">
+                <button onClick="closeCart()" type="button"><img src="./src/icons/close.svg" alt=""></button>
+                <div class="shoppingCart">
+                    <div class="title">Carrinho</div>
+                    <div class="product">
+                        <div class="delete-btn"><img src="./src/icons/delete.svg" alt=""></div>
+                        <div class="image">
+                            <img src="./src/" alt="">
+                        </div>
+                        <div class="description">
+                            <span>Descrição principal</span>
+                            <span>Característica do produto</span>
+                        </div>
+                        <div class="quantidade">
+                            <button class="mais-btn" type="button">+</button>
+                            <input type="text" name="qtd-produto" value="1">
+                            <button class="menos-btn" type="button">-</button>
+                        </div>
+                        <div class="preco">R$ 20,00</div>
+                    </div>
+                    
+                    <div class="cartFim">Buy</div>
                 </div>
             </div>
         </div>
         <div class="corpo">
             <div class="container">
+                <button onclick="addOne()" type="button">Add</button>
+                <button onclick="removeOne()" type="button">Remove</button>
                 <h2>Itens para adicionar no carrinho</h2>
                 <div class="itens">
                     <div class="item">
