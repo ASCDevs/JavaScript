@@ -38,6 +38,7 @@ function soma(arr, n) {
 
 console.log(fat(3))
 console.log(fat(5))
+console.log(fat(6))
 console.log(fibonacci(0))
 console.log(fibonacci(1))
 console.log(fibonacci(9))
