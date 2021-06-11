@@ -1,0 +1,90 @@
+<!-- Storage = interface que fornece acesso ao armazenamento 
+    de sessão ou armazenamento local para um domínio específico
+*/
+//Window.localStorage = Permite acessar um objeto Storage local
+//https://developer.mozilla.org/pt-BR/docs/Web/API/Window/localStorage -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage</title>
+</head>
+<body>
+    <h2>Armazenamento Local</h2>
+    <p>Ao fechar a janela e retornar os valores gravados irão continuar</p>
+    <p>Os dados são armazenados localmente</p>
+    <br>
+    <label for="campo1">Texto 1:</label>
+    <input type="text" name="campo1" id="campo1"><br>
+
+    <label for="campo2">Texto 2:</label>
+    <input type="text" name="campo2" id="campo2"><br>
+
+    <label for="campo3">Texto 3:</label>
+    <input type="text" name="campo3" id="campo3"><br>
+    <br>
+
+    <button id="btn-gravar">Gravar Textos</button>
+    <button id="btn-limpar">Limpar Textos</button>
+
+    <h3>Textos gravados</h3>
+    <ul>
+        <li id="vl1"></li>
+        <li id="vl2"></li>
+        <li id="vl3"></li>
+    </ul>
+
+    <script>
+        let campoUm = document.getElementById("campo1");
+        let campoDois = document.getElementById("campo2");
+        let campoTres = document.getElementById("campo3");
+        let btnGravar = document.getElementById("btn-gravar");
+        let btnLimpar = document.getElementById("btn-limpar");
+
+        let vl1 = document.getElementById("vl1");
+        let vl2 = document.getElementById("vl2");
+        let vl3 = document.getElementById("vl3");
+
+        window.onload = ()=>{
+            exibirGravados();
+        }
+
+        btnGravar.addEventListener("click",()=>{
+            if(campoUm && campoUm.value){
+                localStorage.setItem("campoUm",campoUm.value);
+                campoUm.value = "";
+            }
+            if(campoDois && campoDois.value){
+                localStorage.setItem("campoDois",campoDois.value);
+                campoDois.value = "";
+            }
+            if(campoTres && campoTres.value){
+                localStorage.setItem("campoTres",campoTres.value);
+                campoTres.value = "";
+            }
+            
+            exibirGravados();
+            
+        });
+
+        btnLimpar.addEventListener("click",()=>{
+            localStorage.removeItem("campoUm");
+            localStorage.removeItem("campoDois");
+            localStorage.removeItem("campoTres");
+            exibirGravados();
+        });
+
+
+        function exibirGravados(){
+            vl1.innerHTML = localStorage.getItem("campoUm");
+            vl2.innerHTML = localStorage.getItem("campoDois");
+            vl3.innerHTML = localStorage.getItem("campoTres");
+        }
+
+
+    </script>
+</body>
+</html>
+

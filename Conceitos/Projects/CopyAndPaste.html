@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atalho Copia e Cola</title>
+</head>
+<body>
+
+    <input type="text" id="name" />
+    <button id="copy">Copiar</button>
+
+    <script type="text/javascript">
+        const textInput = document.getElementById("name");
+        const copyButton = document.getElementById("copy");
+
+        copyButton.addEventListener("click",()=>{
+            textInput.select();
+            document.execCommand("copy");
+        });
+    </script>
+</body>
+</html>
